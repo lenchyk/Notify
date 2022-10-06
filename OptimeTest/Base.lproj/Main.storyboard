@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ocQ-mf-efA">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="fgh-nU-dFL">
+            <objects>
+                <navigationController id="ocQ-mf-efA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="FZQ-mp-m8h">
+                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="W5I-8N-0xG" kind="relationship" relationship="rootViewController" id="75d-Sy-lsW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="szU-2h-bcy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1746" y="845"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="cqp-ma-z2d">
+            <objects>
+                <viewController id="W5I-8N-0xG" customClass="TableViewController" customModule="OptimeTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lE3-YT-i8y">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SEP-K0-a9q">
+                                <rect key="frame" x="0.0" y="201" width="390" height="643"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="99R-r3-572">
+                                <rect key="frame" x="24" y="155" width="342" height="32"/>
+                                <segments>
+                                    <segment title="All"/>
+                                    <segment title="Message requests"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oNt-Zo-SVc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="99R-r3-572" firstAttribute="leading" secondItem="oNt-Zo-SVc" secondAttribute="leading" constant="24" id="62J-EH-Z16"/>
+                            <constraint firstItem="99R-r3-572" firstAttribute="top" secondItem="oNt-Zo-SVc" secondAttribute="top" constant="15" id="AAM-Nt-Kkj"/>
+                            <constraint firstItem="SEP-K0-a9q" firstAttribute="trailing" secondItem="oNt-Zo-SVc" secondAttribute="trailing" id="McB-jf-qeA"/>
+                            <constraint firstItem="SEP-K0-a9q" firstAttribute="leading" secondItem="oNt-Zo-SVc" secondAttribute="leading" id="N8a-ve-ZRI"/>
+                            <constraint firstAttribute="bottom" secondItem="SEP-K0-a9q" secondAttribute="bottom" id="aBX-Oi-ljy"/>
+                            <constraint firstItem="oNt-Zo-SVc" firstAttribute="trailing" secondItem="99R-r3-572" secondAttribute="trailing" constant="24" id="bBM-h0-jmC"/>
+                            <constraint firstItem="SEP-K0-a9q" firstAttribute="top" secondItem="99R-r3-572" secondAttribute="bottom" constant="15" id="wgu-z7-vaM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notifications" id="yXH-e9-gg8"/>
+                    <connections>
+                        <outlet property="notificationsTableView" destination="SEP-K0-a9q" id="w3V-Sa-mqW"/>
+                        <outlet property="segmentedControl" destination="99R-r3-572" id="rGm-Ux-7Wl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MEF-v4-XWH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-966.15384615384608" y="844.54976303317528"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OptimeTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="753" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4A6-8t-oH8">
+                                <rect key="frame" x="10" y="644" width="370" height="146"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kbu-YS-cjB">
+                                        <rect key="frame" x="0.0" y="0.0" width="116.66666666666667" height="146"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYA-rc-yEL">
+                                                <rect key="frame" x="0.0" y="0.0" width="116.66666666666667" height="73"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJI-5o-AMb" userLabel="secondView">
+                                                <rect key="frame" x="0.0" y="73" width="116.66666666666667" height="73"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSb-wr-GLE" userLabel="secondLabel">
+                                                        <rect key="frame" x="54.333333333333329" y="26.333333333333371" width="10" height="20.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="vSb-wr-GLE" firstAttribute="centerY" secondItem="RJI-5o-AMb" secondAttribute="centerY" id="U5t-h0-7jh"/>
+                                                    <constraint firstItem="vSb-wr-GLE" firstAttribute="centerX" secondItem="RJI-5o-AMb" secondAttribute="centerX" constant="1" id="tdD-Fg-Dkb"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XhN-U6-3k8" userLabel="firstView">
+                                        <rect key="frame" x="126.66666666666666" y="0.0" width="116.66666666666666" height="146"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p18-7f-TzL" userLabel="firstLabel">
+                                                <rect key="frame" x="54.666666666666686" y="63" width="7.6666666666666643" height="20.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.36264852959999999" green="0.82227559800000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="p18-7f-TzL" firstAttribute="centerY" secondItem="XhN-U6-3k8" secondAttribute="centerY" id="8cb-id-alr"/>
+                                            <constraint firstItem="p18-7f-TzL" firstAttribute="centerX" secondItem="XhN-U6-3k8" secondAttribute="centerX" id="h6L-GJ-lbJ"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="De2-aK-ase">
+                                        <rect key="frame" x="253.33333333333329" y="0.0" width="116.66666666666666" height="146"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QHI-dv-uVn">
+                                                <rect key="frame" x="0.0" y="0.0" width="116.66666666666667" height="48.666666666666664"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ie-B5-R20">
+                                                <rect key="frame" x="0.0" y="48.666666666666629" width="116.66666666666667" height="48.666666666666657"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8D-r7-Ncz" userLabel="thirdView">
+                                                <rect key="frame" x="0.0" y="97.333333333333371" width="116.66666666666667" height="48.666666666666657"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJ0-aa-3Rc" userLabel="thirdLabel">
+                                                        <rect key="frame" x="53.333333333333371" y="14.333333333333258" width="10.333333333333336" height="20.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="KJ0-aa-3Rc" firstAttribute="centerY" secondItem="A8D-r7-Ncz" secondAttribute="centerY" id="EjZ-3g-Rdt"/>
+                                                    <constraint firstItem="KJ0-aa-3Rc" firstAttribute="centerX" secondItem="A8D-r7-Ncz" secondAttribute="centerX" id="R8e-aw-qho"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4A6-8t-oH8" secondAttribute="bottom" constant="20" id="4ym-Ea-pXR"/>
+                            <constraint firstItem="4A6-8t-oH8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="6ke-J9-Nkf">
+                                <variation key="heightClass=compact-widthClass=compact" constant="10"/>
+                            </constraint>
+                            <constraint firstItem="4A6-8t-oH8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="EVM-nU-kxQ" customClass="NSLayoutHelper" customModule="LayoutHelper">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone4s">
+                                        <real key="value" value="230"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                        <real key="value" value="230"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE2G">
+                                        <real key="value" value="230"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone8Plus">
+                                        <real key="value" value="300"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone11">
+                                        <real key="value" value="300"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone11Pro">
+                                        <real key="value" value="300"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone11Max">
+                                        <real key="value" value="300"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone12Mini">
+                                        <real key="value" value="250"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone12">
+                                        <real key="value" value="250"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone12ProMax">
+                                        <real key="value" value="300"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPadPro9_7">
+                                        <real key="value" value="600"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPadPro10_5">
+                                        <real key="value" value="600"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPadPro12_9">
+                                        <real key="value" value="800"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPadPro11">
+                                        <real key="value" value="600"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPadMini">
+                                        <real key="value" value="500"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="4A6-8t-oH8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="600" id="Q6k-PQ-dnH" customClass="NSLayoutHelper" customModule="LayoutHelper">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone4s">
+                                        <real key="value" value="350"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                        <real key="value" value="400"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE2G">
+                                        <real key="value" value="450"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone8Plus">
+                                        <real key="value" value="550"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone11Max">
+                                        <real key="value" value="650"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone11">
+                                        <real key="value" value="600"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone11Pro">
+                                        <real key="value" value="600"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone12Mini">
+                                        <real key="value" value="600"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone12">
+                                        <real key="value" value="620"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone12ProMax">
+                                        <real key="value" value="650"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPadPro9_7">
+                                        <real key="value" value="800"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPadPro10_5">
+                                        <real key="value" value="900"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPadPro12_9">
+                                        <real key="value" value="1100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPadMini">
+                                        <real key="value" value="700"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPadPro11">
+                                        <real key="value" value="950"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="4A6-8t-oH8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zBa-pg-tcv"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EVM-nU-kxQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="EVM-nU-kxQ"/>
+                                <exclude reference="Q6k-PQ-dnH"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1746" y="109"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
