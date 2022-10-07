@@ -19,6 +19,8 @@
 		BCA4A54428EF54C400E75940 /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCA4A54228EF54C400E75940 /* PersonTableViewCell.xib */; };
 		BCA4A54A28EF550600E75940 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA4A54928EF550600E75940 /* Constants.swift */; };
 		BCA4A54F28EF561B00E75940 /* PersonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA4A54E28EF561B00E75940 /* PersonData.swift */; };
+		BCEF2FAD28F0484E0084A9E8 /* UIDevice+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEF2FAC28F0484E0084A9E8 /* UIDevice+extensions.swift */; };
+		BCEF2FB028F048F90084A9E8 /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEF2FAF28F048F90084A9E8 /* DeviceModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		BCA4A54228EF54C400E75940 /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
 		BCA4A54928EF550600E75940 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BCA4A54E28EF561B00E75940 /* PersonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonData.swift; sourceTree = "<group>"; };
+		BCEF2FAC28F0484E0084A9E8 /* UIDevice+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+extensions.swift"; sourceTree = "<group>"; };
+		BCEF2FAF28F048F90084A9E8 /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,8 @@
 		BCA4A54828EF54F700E75940 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BCEF2FAC28F0484E0084A9E8 /* UIDevice+extensions.swift */,
+				BCEF2FAF28F048F90084A9E8 /* DeviceModel.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -322,6 +328,8 @@
 				BC272DB128EEF5E200F7C98B /* SceneDelegate.swift in Sources */,
 				BCA4A54328EF54C400E75940 /* PersonTableViewCell.swift in Sources */,
 				BCA4A53A28EF2F4C00E75940 /* TableViewController.swift in Sources */,
+				BCEF2FB028F048F90084A9E8 /* DeviceModel.swift in Sources */,
+				BCEF2FAD28F0484E0084A9E8 /* UIDevice+extensions.swift in Sources */,
 				BCA4A54F28EF561B00E75940 /* PersonData.swift in Sources */,
 				BCA4A54A28EF550600E75940 /* Constants.swift in Sources */,
 			);
